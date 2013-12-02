@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Spinner
+        android:id="@+id/spinnerSonidos"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/seekBarTempo"
+        android:layout_alignTop="@+id/beatPicker"
+        android:layout_marginRight="17dp" />
+
+    <TextView
+        android:id="@+id/labelSonidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelBeat"
+        android:layout_alignBottom="@+id/labelBeat"
+        android:layout_toLeftOf="@+id/spinnerSonidos"
+        android:text="@string/label_sonidos"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="metronomo"
+        android:text="@string/play" />
+
+    <ImageView
+        android:id="@+id/imagenNegra"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/negra"
+        android:layout_alignLeft="@+id/negra"
+        android:layout_marginLeft="14dp"
+        android:contentDescription="@string/negraDescripcion" />
+
+    <ImageView
+        android:id="@+id/ImagenCorchea"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/corchea"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/negraDescripcion" />
+
+    <RadioButton
+        android:id="@+id/triplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ImagenCorchea"
+        android:layout_toLeftOf="@+id/spinnerSonidos"
+        android:checked="false" />
+
+    <ImageView
+        android:id="@+id/ImagenTriplete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/ImagenCorchea"
+        android:layout_alignLeft="@+id/spinnerSonidos"
+        android:contentDescription="@string/negraDescripcion" />
+
+    <RadioButton
+        android:id="@+id/negra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBarTempo"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:checked="true" />
+
+    <RadioButton
+        android:id="@+id/corchea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imagenNegra"
+        android:layout_toLeftOf="@+id/ImagenCorchea"
+        android:checked="false" />
+
+    <SeekBar
+        android:id="@+id/seekBarTempo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImagenCorchea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+
+    <TextView
+        android:id="@+id/labelBeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBarTempo"
+        android:layout_alignTop="@+id/beatPicker"
+        android:layout_marginTop="37dp"
+        android:text="@string/label_beat"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <NumberPicker
+        android:id="@+id/beatPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tempo"
+        android:layout_marginTop="34dp"
+        android:layout_toRightOf="@+id/negra" />
+
+    <TextView
+        android:id="@+id/tempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playButton"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/labelSonidos"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+</RelativeLayout>
