@@ -24,7 +24,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
@@ -143,6 +145,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+//		LinearLayout layout = (LinearLayout) findViewById(R.id.mainLayout);
+//		layout.setBackgroundResource(R.drawable.background);
+//		
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 		
 		SeekBar bar = (SeekBar) findViewById(R.id.seekBarTempo);
@@ -173,29 +178,21 @@ public class MainActivity extends Activity {
     	triplete.setOnCheckedChangeListener(toggleListener);
     	negra.setOnCheckedChangeListener(toggleListener);
     	
-//    	ImageView imageNegra = (ImageView) findViewById(R.id.imagenNegra);
-//    	imageNegra.setImageResource(R.drawable.negra);
-    	
-//    	ImageView imageCorchea = (ImageView) findViewById(R.id.ImagenCorchea);
-//    	imageCorchea.setImageResource(R.drawable.corchea);
-//    	
-//    	ImageView imageTriplet = (ImageView) findViewById(R.id.ImagenTriplete);
-//    	imageTriplet.setImageResource(R.drawable.triplet);
 		
 		beat = 1;
 		figura = TipoFigura.negra;
 	
 	}
 
-	public void metronomo (View view) throws IllegalArgumentException, SecurityException, IllegalStateException, IOException{
-		Button button = (Button) findViewById(R.id.playButton);
+	public void playPause (View view) throws IllegalArgumentException, SecurityException, IllegalStateException, IOException{
+		ImageButton button = (ImageButton) findViewById(R.id.playButton);
 		if(mediaPlayer.isPlaying()){
-			button.setText(R.string.play);
+			button.setImageResource(R.drawable.play);
 			mediaPlayer.stop();
 //			mediaPlayer.release();
 		}else{
 			
-			button.setText(R.string.stop);
+			button.setImageResource(R.drawable.pause);
 			TextView text = (TextView) findViewById(R.id.tempo);
 			Integer value = Integer.valueOf(text.getText().toString());
 			NumberPicker np = (NumberPicker) findViewById(R.id.beatPicker);

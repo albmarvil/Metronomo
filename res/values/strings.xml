@@ -27,5 +27,6 @@
         <string name="negraDescription">Imagen equivalente a una figura conocida como &quot;Negra&quot;</string>
         <string name="corcheaDescription">Imagen equivalente a una figura conocida como &quot;corchea&quot;</string>
         <string name="tripleteDescription">Imagen de una figura conocida como&quot;Triplete&quot;</string>
+        <string name="playDescription">imagen para el botón play</string>
 
 </resources>
