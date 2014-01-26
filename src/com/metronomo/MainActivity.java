@@ -12,6 +12,7 @@ import manipulacionMidi.MidiSelector;
 import manipulacionMidi.TipoFigura;
 import manipulacionMidi.TipoSonido;
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -23,6 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
@@ -170,6 +172,15 @@ public class MainActivity extends Activity {
     	corchea.setOnCheckedChangeListener(toggleListener);
     	triplete.setOnCheckedChangeListener(toggleListener);
     	negra.setOnCheckedChangeListener(toggleListener);
+    	
+//    	ImageView imageNegra = (ImageView) findViewById(R.id.imagenNegra);
+//    	imageNegra.setImageResource(R.drawable.negra);
+    	
+//    	ImageView imageCorchea = (ImageView) findViewById(R.id.ImagenCorchea);
+//    	imageCorchea.setImageResource(R.drawable.corchea);
+//    	
+//    	ImageView imageTriplet = (ImageView) findViewById(R.id.ImagenTriplete);
+//    	imageTriplet.setImageResource(R.drawable.triplet);
 		
 		beat = 1;
 		figura = TipoFigura.negra;

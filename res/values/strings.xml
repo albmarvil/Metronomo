@@ -13,8 +13,8 @@
         <item>B</item>
         <item>C</item>
     </string-array>
-    <string name="label_sonidos">Sonido: </string>
-    <string name="label_beat">Beat: </string>
+    <string name="label_sonidos">Sonido</string>
+    <string name="label_beat">Beats</string>
     <string-array name="Beats">
         <item>1</item>
         <item>2</item>
@@ -24,6 +24,8 @@
         <item>6</item>
         <item>7</item>
     </string-array>
-        <string name="negraDescripcion">Imagen de la figura \"Negra\"</string>
+        <string name="negraDescription">Imagen equivalente a una figura conocida como &quot;Negra&quot;</string>
+        <string name="corcheaDescription">Imagen equivalente a una figura conocida como &quot;corchea&quot;</string>
+        <string name="tripleteDescription">Imagen de una figura conocida como&quot;Triplete&quot;</string>
 
 </resources>
