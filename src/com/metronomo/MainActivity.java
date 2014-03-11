@@ -119,15 +119,6 @@ public class MainActivity extends Activity {
 					case 2:
 						tipoSonido = TipoSonido.C;
 						break;
-					case 3:
-						tipoSonido = TipoSonido.D;
-						break;
-					case 4:
-						tipoSonido = TipoSonido.E;
-						break;
-					case 5:
-						tipoSonido = TipoSonido.F;
-						break;
 				}			
 		}
 
