@@ -1,7 +1,5 @@
 package com.metronomo;
 
-
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,30 +9,27 @@ import manipulacionMidi.MidiManipulatorImpl;
 import manipulacionMidi.MidiSelector;
 import manipulacionMidi.TipoFigura;
 import manipulacionMidi.TipoSonido;
-import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.app.Activity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 public class MainActivity extends Activity {
-	
+
 	
 	private MediaPlayer mediaPlayer = new MediaPlayer();
 	private TipoSonido tipoSonido = TipoSonido.A;
@@ -129,9 +124,7 @@ public class MainActivity extends Activity {
 		}
 		
 	};
-	
-
-	
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -172,9 +165,8 @@ public class MainActivity extends Activity {
 		
 		beat = 1;
 		figura = TipoFigura.negra;
-	
 	}
-
+	
 	public void playPause (View view) throws IllegalArgumentException, SecurityException, IllegalStateException, IOException{
 		ImageButton button = (ImageButton) findViewById(R.id.playButton);
 		if(mediaPlayer.isPlaying()){
@@ -233,5 +225,12 @@ public class MainActivity extends Activity {
 //        	mediaPlayer.release();
         }
     }
-}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

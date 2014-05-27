@@ -1,21 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mainRelativeLayout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
-
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
-
-    <LinearLayout
-        android:id="@+id/mainLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    android:background="@drawable/geometry2"
+    android:orientation="vertical" >
 
         <RelativeLayout
             android:id="@+id/RelativeLayoutRadiusFiguras"
@@ -168,5 +156,3 @@
                 android:src="@drawable/play" />
         </RelativeLayout>
     </LinearLayout>
-
-</RelativeLayout>
